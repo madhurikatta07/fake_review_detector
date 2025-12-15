@@ -1,0 +1,11 @@
+BEST MODEL: Linear SVM
+ACCURACY: 0.9252623338698753
+
+              precision    recall  f1-score   support
+
+           0       0.79      0.64      0.71     16181
+           1       0.94      0.97      0.96     97510
+
+    accuracy                           0.93    113691
+   macro avg       0.87      0.81      0.83    113691
+weighted avg       0.92      0.93      0.92    113691

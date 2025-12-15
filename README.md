@@ -1,53 +1,43 @@
-Fake Review Detection System (ML Project)
-📌 Overview
+Fake Review Detection System
+🔹 Project Overview
 
-This project detects fake reviews using Machine Learning techniques.
-It uses:
+A machine learning-based system to detect fake product reviews from text and images.
+The system uses a text-only baseline and an OCR pipeline for extracting review text from screenshots or photos to train ML models for real-world detection.
 
-Text preprocessing (tokenization, stopwords removal, lemmatization)
+📅 Week 1 — Setup & Baseline (Text-only)
 
-TF-IDF vectorization
+Goal: Set up project environment, collect initial data, and create a baseline model.
 
-Logistic Regression / SVM baseline models (M1)
+Installed Python, Git, and Tesseract OCR.
 
+Created project structure and virtual environment.
 
-fake_review_project/
-│
-├── dataset/
-│     └── Reviews.csv
-│
-├── preprocess.py
-├── model_train.py
-├── vectorizer.pkl
-├── model.pkl
-├── README.md
+Collected and cleaned text-only review data.
 
+Performed exploratory data analysis (EDA).
 
+Built a baseline ML model (TF-IDF + Logistic Regression).
 
-⚙️ Current Progress (M1 Baseline)
+Generated a preliminary report on dataset and model performance.
 
-Dataset loaded
+📅 Week 2 — OCR Pipeline & Image Preprocessing
 
-Cleaned text
+Goal: Extract review text from screenshots/photos for ML input.
 
-TF-IDF vectorizer trained
+Collected 200–500 raw and synthetic review images.
 
-Baseline model trained
+Implemented preprocessing functions (grayscale, denoise, threshold) in src/ocr.py.
 
-Achieved accuracy: (add your accuracy here)
+Integrated Tesseract OCR for text extraction.
 
-Model and vectorizer saved as .pkl files
+Cleaned and normalized extracted text.
 
+Structured data into CSV: review_id | product_id | review_text | source_image.
 
+Validated OCR output and prepared checkpoint CSV for ML training.
 
-🚀 Next Steps
+✅ Next Steps
 
-Improve accuracy
+Week 3 onward: Train ML models using structured OCR data.
 
-Try different ML algorithms
-
-Add feature engineering
-
-Build Flask API
-
-Add frontend UI
+Evaluate, tune, and deploy a system for real-world fake review detection.
