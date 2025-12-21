@@ -73,10 +73,10 @@ def train_advanced_model():
     print("🔥 Best Accuracy:", best_acc)
 
     # Save best model
-    pickle.dump(best_model, open("best_model.pkl", "wb"))
-    pickle.dump(vectorizer, open("best_vectorizer.pkl", "wb"))
+    pickle.dump(best_model, open("models/best_model.pkl", "wb"))
+    pickle.dump(vectorizer, open("models/best_vectorizer.pkl", "wb"))
 
-    print("\n✔ Saved: best_model.pkl & best_vectorizer.pkl")
+    print("\n✔ Saved: models/best_model.pkl & models/best_vectorizer.pkl")
 
     # Evaluation of best model
     preds = best_model.predict(X_test)

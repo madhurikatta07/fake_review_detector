@@ -4,3 +4,7 @@ nltk
 textblob
 scikit-learn
 spacy
+joblib
+pytesseract
+Pillow
+opencv-python

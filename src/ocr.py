@@ -9,6 +9,20 @@ import os
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
 
+def extract_text_from_image(image_path):
+    """
+    Extracts review text from image using OCR
+    """
+    img = cv2.imread(image_path)
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+    # Improve OCR quality
+    gray = cv2.threshold(gray, 150, 255, cv2.THRESH_BINARY)[1]
+
+    text = pytesseract.image_to_string(gray)
+    return text.strip()
+
+
 def preprocess_image(path):
     """
     Takes image path -> returns cleaned, thresholded image
@@ -35,6 +49,8 @@ def preprocess_image(path):
     _, th = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
 
     return th
+
+
 
 
 def ocr_from_image(path, lang='eng'):
@@ -73,7 +89,6 @@ if __name__ == "__main__":
 
     print("\nConfidence:", conf)
     print("\nExtracted Text:\n", txt[:300])
-
 
 
 

@@ -42,10 +42,10 @@ def train_model():
     print("\nConfusion Matrix:\n", confusion_matrix(y_test, preds))
     
     # Save model & vectorizer
-    pickle.dump(model, open("model.pkl", "wb"))
-    pickle.dump(vectorizer, open("vectorizer.pkl", "wb"))
-    
-    print("✔ Model and vectorizer saved as 'model.pkl' and 'vectorizer.pkl'")
+    pickle.dump(model, open("models/model.pkl", "wb"))
+    pickle.dump(vectorizer, open("models/vectorizer.pkl", "wb"))
+
+    print("✔ Model and vectorizer saved as 'models/model.pkl' and 'models/vectorizer.pkl'")
 
 train_model()
 
